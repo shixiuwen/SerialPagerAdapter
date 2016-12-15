@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.shixia.serialpageradapter.MainActivity"
+    android:orientation="vertical">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_Bitmap"
+        android:layout_width="match_parent"
+        android:layout_height="600px" />
+
+    <!--显示宽度和页面个数相关,注意请勿将RelativeLayout作为该控件的直接父布局，否则可能导致宽度显示不全-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="580px"
+        android:gravity="bottom"
+        android:layout_centerHorizontal="true">
+        <com.shixia.serialpageradapter.PageChangeIndicatorView
+            android:id="@+id/pci_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="20px"
+            android:layout_marginTop="20px"/>
+    </LinearLayout>
+
+</RelativeLayout>
